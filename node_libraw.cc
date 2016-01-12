@@ -1,4 +1,5 @@
-#include <node.h>
+#include <v8.h>
+#include <nan.h>
 
 #include "libraw/libraw.h"
 
@@ -15,13 +16,22 @@ namespace node_libraw {
   using v8::Value;
   using v8::Null;
 
-  void Method(const FunctionCallbackInfo<Value>& args) {
-    Isolate* isolate = args.GetIsolate();
-    args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
+  NAN_METHOD(Hello) {
+    Nan::HandleScope scope;
+
+    v8::String::Utf8Value nameFromArgs(info[0]->ToString());
+    std::string name = std::string(*nameFromArgs);
+    std::string response = "hello " + name;
+
+    info.GetReturnValue().Set(Nan::New(response).ToLocalChecked());
   }
 
   void init(Local<Object> exports) {
-    NODE_SET_METHOD(exports, "hello", Method);
+    Nan::Set(
+      exports,
+      Nan::New<String>("hello").ToLocalChecked(),
+      Nan::GetFunction(Nan::New<v8::FunctionTemplate>(Hello)).ToLocalChecked()
+    );
   }
 
   NODE_MODULE(libraw, init)
