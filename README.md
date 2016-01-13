@@ -5,5 +5,5 @@ How to use:
 ```
 var libraw = require('node-libraw');
 
-var outputFile = libraw('./test.raf', './output');
+var outputFile = libraw.extractThumb('./test.raf', './output');
 ```
