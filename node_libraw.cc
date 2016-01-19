@@ -19,8 +19,6 @@ namespace node_libraw {
   using v8::Value;
   using v8::Null;
 
-  //using Nan::Callback;
-
   NAN_METHOD(Hello) {
     Nan::HandleScope scope;
 
