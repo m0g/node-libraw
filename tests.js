@@ -27,7 +27,7 @@ describe('LibRAW', function() {
     var output = '';
 
     it('should extract the tiff', function () {
-      this.timeout(5000);
+      this.timeout(90000);
       output = libraw.extract('./test.raf', './output');
       expect(output).to.equal('./output.tiff');
     });

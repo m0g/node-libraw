@@ -19,16 +19,6 @@ namespace node_libraw {
   using v8::Value;
   using v8::Null;
 
-  //NAN_METHOD(Hello) {
-  //  Nan::HandleScope scope;
-
-  //  v8::String::Utf8Value nameFromArgs(info[0]->ToString());
-  //  std::string name = std::string(*nameFromArgs);
-  //  std::string response = "hello " + name;
-
-  //  info.GetReturnValue().Set(Nan::New(response).ToLocalChecked());
-  //}
-
   NAN_METHOD(Extract) {
     Nan::HandleScope scope;
 
@@ -50,6 +40,12 @@ namespace node_libraw {
       RawProcessor.open_buffer(buffer.data(), size);
       RawProcessor.unpack();
       RawProcessor.imgdata.params.output_tiff = 1;
+      //RawProcessor.imgdata.params.filtering_mode = LIBRAW_FILTERING_AUTOMATIC;
+      RawProcessor.imgdata.params.output_bps = 16; // Write 16 bits per color value
+  //		rawProcessor_.imgdata.params.gamm[0] = rawProcessor_.imgdata.params.gamm[1] = 1.0; // linear gamma curve
+  //		rawProcessor_.imgdata.params.no_auto_bright = 1; // Don't use automatic increase of brightness by histogram.
+      //RawProcessor.imgdata.params.document_mode = 0; // standard processing (with white balance)
+      RawProcessor.imgdata.params.use_camera_wb = 1;
       RawProcessor.dcraw_process();
 
       output = output + ".tiff";
