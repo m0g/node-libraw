@@ -14,11 +14,15 @@
       "include_dirs": [ 
         "."
       ],
-      "cflags": [ "-pthread -w" ],
+      "cflags": [ 
+        "-pthread -w",
+        "-Wdeprecated-declarations"
+      ],
       "cflags_cc": [
         "-pthread -w",
         "-DLIBRAW_NOTHREADS -w",
-        "-fexceptions"
+        "-fexceptions",
+        "-Wdeprecated-declarations"
       ]
     }
   ]
