@@ -4,7 +4,6 @@
     {
       "target_name": "node-libraw",
       "sources": [ "node_libraw.cc" ],
-      "libraries": [ "-Wl,-rpath=build/Release/raw.a" ],
       "include_dirs" : [
         "vendor/LibRaw-0.17.1",
         "<!(node -e \"require('nan')\")"

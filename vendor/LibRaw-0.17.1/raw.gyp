@@ -14,15 +14,21 @@
       "include_dirs": [ 
         "."
       ],
+      "libraries": [
+        "-ljpeg8"
+      ],
       "cflags": [ 
-        "-pthread -w",
-        "-Wdeprecated-declarations"
+        "-pthread -w"
       ],
       "cflags_cc": [
         "-pthread -w",
-        "-DLIBRAW_NOTHREADS -w",
         "-fexceptions",
-        "-Wdeprecated-declarations"
+        "-Wdeprecated-declarations",
+        "-I/node-libraw/vendor/LibRaw-demosaic-pack-GPL2-0.17.1",
+        "-DLIBRAW_DEMOSAIC_PACK_GPL2",
+        "-I/node-libraw/vendor/LibRaw-demosaic-pack-GPL3-0.17.1",
+        "-DLIBRAW_DEMOSAIC_PACK_GPL3",
+        "-DUSE_JPEG8"
       ]
     }
   ]
