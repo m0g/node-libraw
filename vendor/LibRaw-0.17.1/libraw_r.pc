@@ -1,0 +1,11 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libraw
+Description: Raw image decoder library (thread-safe)
+Requires: 
+Version: 0.17.1
+Libs: -L${libdir} -lraw_r -lstdc++ -fopenmp
+Cflags: -I${includedir}/libraw

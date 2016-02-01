@@ -1,12 +1,15 @@
 {
+  "includes": [ "vendor/LibRaw-0.17.1/raw.gyp" ],
   "targets": [
     {
-      "target_name": "libraw",
+      "target_name": "node-libraw",
       "sources": [ "node_libraw.cc" ],
       "libraries": [
-        "-lraw",
+        "-lraw"
       ],
-      "include_dirs" : ["<!(node -e \"require('nan')\")"]
+      "include_dirs" : [
+        "<!(node -e \"require('nan')\")"
+      ]
     }
   ],
 }
