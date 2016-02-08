@@ -7,8 +7,8 @@ describe('LibRAW', function() {
     var outputFilename = '';
 
     it('should extract the thumbnail', function () {
-      libraw.extractThumb('./test.raf', './output',
-        function(err, output) {
+      libraw.extractThumb('./test.raf', './output')
+        .then(function(output) {
           expect(output).to.equal('./output.thumb.jpg');
           outputFilename = output;
         });
@@ -32,10 +32,11 @@ describe('LibRAW', function() {
     it('should extract the tiff', function () {
       this.timeout(90000);
 
-      libraw.extract('./test.raf', './output', function(err, output) {
-        expect(output).to.equal('./output.tiff');
-        outputFilename = output;
-      });
+      libraw.extract('./test.raf', './output')
+        .then(function(output) {
+          expect(output).to.equal('./output.tiff');
+          outputFilename = output;
+        });
     });
 
     it('should check that the file has been properly created', function(done) {
