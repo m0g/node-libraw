@@ -1,14 +1,18 @@
 {
   "name": "libraw",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.1.0",
+  "description": "Asynchronous bindings for LibRaw",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/m0g/node-libraw.git"
+  },
   "main": "libraw.js",
   "scripts": {
     "build": "node-gyp configure build",
     "test": "mocha tests.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "engines" : {
     "node" : ">4.0"
   },
