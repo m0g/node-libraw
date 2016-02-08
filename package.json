@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines" : {
+    "node" : ">4.0"
+  },
   "dependencies": {
     "nan": "^2.2.0"
   },
