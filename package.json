@@ -13,6 +13,13 @@
   },
   "author": "",
   "license": "MIT",
+  "keywords": [
+    "raw",
+    "libraw",
+    "photography",
+    "camera",
+    "image"
+  ],
   "engines" : {
     "node" : ">4.0"
   },

@@ -2,6 +2,8 @@
 
 Asynchronous bindings for LibRaw.
 
+[![NPM](https://nodei.co/npm/libraw.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/libraw/)
+
 **Be careful this library is in alpha. The API is susceptible to change at any moment**
 
 ## Supported platforms
@@ -10,7 +12,7 @@ So far that library only supports Linux (tested on ubuntu 14.04 LTS) with node >
 
 ## Usage
 
-```
+``` js
 import libraw from 'libraw';
 
 // For extracting the RAW tiff
