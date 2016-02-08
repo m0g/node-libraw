@@ -1,9 +1,10 @@
 {
-  "name": "node-libraw",
+  "name": "libraw",
   "version": "0.0.1",
   "description": "",
   "main": "libraw.js",
   "scripts": {
+    "build": "node-gyp configure build",
     "test": "mocha tests.js"
   },
   "author": "",
