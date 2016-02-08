@@ -1,18 +1,19 @@
 {
   "targets": [
     {
+      "default_configuration": "Release",
       "target_name": "libraw",
       "type": "static_library",
       "sources": [
-        "internal/dcraw_common.cpp",
-        "internal/dcraw_fileio.cpp",
-        "internal/demosaic_packs.cpp",
-        "src/libraw_cxx.cpp",
-        "src/libraw_datastream.cpp",
-        "src/libraw_c_api.cpp"
+        "LibRaw-0.17.1/internal/dcraw_common.cpp",
+        "LibRaw-0.17.1/internal/dcraw_fileio.cpp",
+        "LibRaw-0.17.1/internal/demosaic_packs.cpp",
+        "LibRaw-0.17.1/src/libraw_cxx.cpp",
+        "LibRaw-0.17.1/src/libraw_datastream.cpp",
+        "LibRaw-0.17.1/src/libraw_c_api.cpp"
       ],
       "include_dirs": [ 
-        "."
+        "./LibRaw-0.17.1"
       ],
       "libraries": [
         "-ljpeg8"

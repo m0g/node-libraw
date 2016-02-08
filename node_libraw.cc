@@ -3,8 +3,9 @@
 #include <fstream>
 #include <v8.h>
 #include <nan.h>
+#include <libraw/libraw.h>
 
-#include "libraw/libraw.h"
+//#include "libraw/libraw.h"
 
 namespace node_libraw {
   using v8::Exception;
