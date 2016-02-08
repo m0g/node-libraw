@@ -11,17 +11,17 @@ So far that library only supports Linux (tested on ubuntu 14.04 LTS) with node >
 ## Usage
 
 ```
-var libraw = require('libraw');
+import libraw from 'libraw';
 
 // For extracting the RAW tiff
 libraw.extract('./test.raf', './output')
-  .then(function(output) {
+  .then((output) => {
     console.log(output);
   });
 
 // For extracting the embedded jpg thumbnail
 libraw.extractThumb('./test.raf', './output')
-  .then(function(output) {
+  .then((output) => {
     console.log(output);
   });
 ```
