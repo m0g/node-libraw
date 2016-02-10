@@ -21,12 +21,12 @@
         "-ljpeg8"
       ],
       "cflags": [ 
+        "-Wdeprecated-declarations",
         "-pthread -w"
       ],
       "cflags_cc": [
         "-pthread -w",
         "-fexceptions",
-        "-Wdeprecated-declarations",
         "-I./LibRaw-demosaic-pack-GPL2-0.17.1",
         "-DLIBRAW_DEMOSAIC_PACK_GPL2",
         "-I./LibRaw-demosaic-pack-GPL3-0.17.1",

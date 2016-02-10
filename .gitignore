@@ -16,3 +16,5 @@ Vagrantfile
 *.jpg
 *.raf
 *.tiff
+*.ppm
+*.tar.gz
