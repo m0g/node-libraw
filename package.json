@@ -1,13 +1,28 @@
 {
-  "name": "node-libraw",
-  "version": "0.0.1",
-  "description": "",
+  "name": "libraw",
+  "version": "0.1.2",
+  "description": "Asynchronous bindings for LibRaw",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/m0g/node-libraw.git"
+  },
   "main": "libraw.js",
   "scripts": {
+    "build": "node-gyp configure build",
     "test": "mocha tests.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "keywords": [
+    "raw",
+    "libraw",
+    "photography",
+    "camera",
+    "image"
+  ],
+  "engines" : {
+    "node" : ">4.0"
+  },
   "dependencies": {
     "nan": "^2.2.0"
   },
