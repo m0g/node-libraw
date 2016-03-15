@@ -1,4 +1,4 @@
-const raw = require('./build/Release/node-libraw');
+const raw = require('./build/Release/node_libraw');
 
 const libraw = {
   extract: function(input, output) {
