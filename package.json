@@ -24,7 +24,7 @@
     "node" : ">4.0"
   },
   "dependencies": {
-    "nan": "^2.2.0"
+    "nan": "^2.2.1"
   },
   "devDependencies": {
     "chai": "^3.4.1",

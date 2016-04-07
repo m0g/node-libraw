@@ -1,7 +1,6 @@
 {
   "targets": [
     {
-      "default_configuration": "Release",
       "target_name": "libraw",
       "type": "static_library",
       "sources": [
@@ -27,6 +26,7 @@
       "cflags_cc": [
         "-pthread -w",
         "-fexceptions",
+        "-DLIBRAW_NOTHREADS -w",
         "-I./LibRaw-demosaic-pack-GPL2-0.17.1",
         "-DLIBRAW_DEMOSAIC_PACK_GPL2",
         "-I./LibRaw-demosaic-pack-GPL3-0.17.1",
