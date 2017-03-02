@@ -33,7 +33,7 @@ namespace node_libraw {
     Nan::Callback *callback = new Nan::Callback(Local<Function>::Cast(info[2]));
 
     std::ifstream file;
-    file.open(filename, std::ios::binary | std::ios::ate);
+    file.open(filename.c_str(), std::ios::binary | std::ios::ate);
     std::streamsize size = file.tellg();
     file.seekg(0, std::ios::beg);
 
@@ -80,7 +80,7 @@ namespace node_libraw {
     std::string extension = "thumb.ppm";
 
     std::ifstream file;
-    file.open(filename, std::ios::binary | std::ios::ate);
+    file.open(filename.c_str(), std::ios::binary | std::ios::ate);
     std::streamsize size = file.tellg();
     file.seekg(0, std::ios::beg);
 
