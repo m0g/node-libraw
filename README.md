@@ -8,7 +8,8 @@ Asynchronous bindings for LibRaw.
 
 ## Supported platforms
 
-So far that library only supports Linux (tested on ubuntu 14.04 LTS) with node > 4.0
+* Ubuntu Linux 16.04 LTS
+* OSX sierra
 
 ## Usage
 
@@ -39,3 +40,19 @@ I'm planning on shipping node-libraw with the latest version of libraw, but due 
 Any contributions are, of course, welcome.
 
 On linux: ```sudo apt-get install libraw-dev```
+
+## Known issues
+
+**OSX: libintl.h not found**
+
+Install gettext via brew
+
+```
+brew install gettext
+```
+
+Create a symlink
+
+```
+ln -s /usr/local/Cellar/gettext/[YOUR-VERSION]/lib/libintl.* /usr/local/include/
+```
