@@ -12,8 +12,6 @@
         "LibRaw/src/libraw_c_api.cpp"
       ],
       "include_dirs": [
-        "./LibRaw-demosaic-pack-GPL2",
-        "./LibRaw-demosaic-pack-GPL3",
         "./LibRaw"
       ],
       "libraries": [
@@ -27,10 +25,6 @@
         "-pthread -w",
         "-fexceptions",
         "-DLIBRAW_NOTHREADS -w",
-        "-I./LibRaw-demosaic-pack-GPL2",
-        "-DLIBRAW_DEMOSAIC_PACK_GPL2",
-        "-I./LibRaw-demosaic-pack-GPL3",
-        "-DLIBRAW_DEMOSAIC_PACK_GPL3",
         "-DUSE_JPEG8"
       ],
       'xcode_settings': {
@@ -40,10 +34,6 @@
             "-pthread -w",
             '-fexceptions',
             "-DLIBRAW_NOTHREADS -w",
-            "-I./LibRaw-demosaic-pack-GPL2",
-            "-DLIBRAW_DEMOSAIC_PACK_GPL2",
-            "-I./LibRaw-demosaic-pack-GPL3",
-            "-DLIBRAW_DEMOSAIC_PACK_GPL3",
             "-DUSE_JPEG8"
         ],
       },
