@@ -25,9 +25,10 @@ namespace node_libraw {
 
     LibRaw RawProcessor;
 
-    v8::String::Utf8Value filenameFromArgs(info[0]->ToString());
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::String::Utf8Value filenameFromArgs(isolate, info[0]);
     std::string filename = std::string(*filenameFromArgs);
-    v8::String::Utf8Value outputFromArgs(info[1]->ToString());
+    v8::String::Utf8Value outputFromArgs(isolate, info[1]);
     std::string output = std::string(*outputFromArgs);
 
     Nan::Callback *callback = new Nan::Callback(Local<Function>::Cast(info[2]));
@@ -70,9 +71,10 @@ namespace node_libraw {
 
     LibRaw RawProcessor;
 
-    v8::String::Utf8Value filenameFromArgs(info[0]->ToString());
+    v8::Isolate* isolate = info.GetIsolate();
+    v8::String::Utf8Value filenameFromArgs(isolate, info[0]);
     std::string filename = std::string(*filenameFromArgs);
-    v8::String::Utf8Value outputFromArgs(info[1]->ToString());
+    v8::String::Utf8Value outputFromArgs(isolate, info[1]);
     std::string output = std::string(*outputFromArgs);
 
     Nan::Callback *callback = new Nan::Callback(Local<Function>::Cast(info[2]));
