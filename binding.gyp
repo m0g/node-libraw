@@ -2,7 +2,6 @@
   "targets": [
     {
       "target_name": "node_libraw",
-      "type": "static_library",
       "sources": [ "node_libraw.cc" ],
       'cflags!': [ '-fno-exceptions' ],
       'cflags_cc!': [ '-fno-exceptions' ],
