@@ -9,6 +9,7 @@
   },
   "main": "libraw.js",
   "scripts": {
+    "clean": "rm -rf build",
     "build": "node-gyp configure build",
     "test": "mocha tests.js"
   },

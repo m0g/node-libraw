@@ -16,3 +16,7 @@ Initialize submodules:
 Load dependencies and build:
 
     yarn
+
+Clean:
+
+    yarn clean
