@@ -2,7 +2,10 @@
   "name": "libraw",
   "version": "0.1.4",
   "description": "Asynchronous bindings for LibRaw",
-  "os": [ "darwin", "linux" ],
+  "os": [
+    "darwin",
+    "linux"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/m0g/node-libraw.git"
@@ -22,15 +25,15 @@
     "camera",
     "image"
   ],
-  "engines" : {
-    "node" : ">4.0"
+  "engines": {
+    "node": ">4.0"
   },
   "dependencies": {
     "nan": "^2.2.1"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
     "node-gyp": "^6.0.0"
   }
 }
