@@ -2,10 +2,6 @@
   "name": "libraw",
   "version": "0.1.4",
   "description": "Asynchronous bindings for LibRaw",
-  "os": [
-    "darwin",
-    "linux"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/m0g/node-libraw.git"

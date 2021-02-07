@@ -11,6 +11,13 @@
         "LibRaw/src/libraw_datastream.cpp",
         "LibRaw/src/libraw_c_api.cpp"
       ],
+      'conditions': [
+         ['OS=="win"', 
+          {
+          'defines': ["_UNICODE", "UNICODE","_WINDOWS","WIN32","_ENABLE_EXTENDED_ALIGNED_STORAGE","WIN64","LIBRAW_BUILDLIB"],         
+           }
+        ]
+      ],
       "include_dirs": [
         "./LibRaw"
       ],
